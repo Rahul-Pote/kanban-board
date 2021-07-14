@@ -42,3 +42,20 @@ body, html {
 .kanban-column__body.dragging {
   background-color: #e2e2e2;
 }
+
+
+/* kanban tasks */
+.kanban-task {
+  padding: 12px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.kanban-task:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.kanban-task.dragging {
+  background-color: #e2e2e2;
+}

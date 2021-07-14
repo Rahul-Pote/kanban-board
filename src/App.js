@@ -29,7 +29,22 @@ function App() {
                       ref={provided.innerRef}
                       className={`kanban-column__body ${snapshot.isDraggingOver ? 'dragging': ''}`}
                     >
-
+                      {
+                        column.items.map((item, idx) => (
+                          <Draggable key={item.id} draggableId={item.id} index={idx}>
+                          {(provided, snapshot) => (
+                            <div
+                              {...provided.draggableProps}
+                              {...provided.dragHandleProps}
+                              ref={provided.innerRef}
+                              className={`kanban-task ${snapshot.isDraggingOver ? 'dragging': ''}`}
+                            >
+                              {item.title}
+                            </div>
+                          )}
+                          </Draggable>
+                        ))
+                      }
                     </div>
                   )}
                 </Droppable>
