@@ -18,7 +18,7 @@ function App() {
       <DragDropContext onDragEnd={result => console.log(result)}>
           {
             Object.entries(columns).map(([id, column]) => (
-              <div className="kanban-column">
+              <div className="kanban-column" key={id}>
                 <div className="kanban-column__head">
                   <h2 className="mb-4">{column.name}</h2>
                 </div>
@@ -45,6 +45,7 @@ function App() {
                           </Draggable>
                         ))
                       }
+                      {provided.placeholder}
                     </div>
                   )}
                 </Droppable>
