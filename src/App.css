@@ -1,3 +1,5 @@
+/* Normalize */
+
 *, ::before,::after {
   box-sizing: border-box;
   margin: 0;
@@ -6,4 +8,37 @@
 
 body, html {
   background: #fff;
+}
+
+/* Kanban */
+.kanban {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: 40px;
+}
+
+/* column */
+
+.kanban-column__body {
+  padding: 8px;
+  width: 300px;
+  min-height: 600px;
+  background-color: #fff;
+  margin-left: 8px;
+  margin-right: 8px;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+}
+
+.kanban-column:first-child > .kanban-column__body {
+  margin-left: 0;
+}
+
+.kanban-column:last-child > .kanban-column__body {
+  margin-right: 0;
+}
+
+.kanban-column__body.dragging {
+  background-color: #e2e2e2;
 }
