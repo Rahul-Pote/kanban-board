@@ -10,12 +10,30 @@ import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
 // import const
 import {kanban_columns} from "./constants";
 
+const onDrageEnd = (result={}, columns, setColumns) => {
+  const {source, destination} = result;
+  if(destination) {
+    const {droppableId, index: sIndex} = source;
+    const column = columns[droppableId];
+    const columnItems = [...column.items];
+    const [selectedTask] = columnItems.splice(sIndex, 1);
+    columnItems.splice(destination.index, 0, selectedTask);
+    setColumns({
+      ...columns,
+      [droppableId]: {
+        ...column,
+        items: columnItems
+      }
+    })
+
+  }
+}
 function App() {
   const [columns, setColumns] = useState(kanban_columns);
 
   return (
     <div className="kanban">
-      <DragDropContext onDragEnd={result => console.log(result)}>
+      <DragDropContext onDragEnd={result => onDrageEnd(result, columns, setColumns)}>
           {
             Object.entries(columns).map(([id, column]) => (
               <div className="kanban-column" key={id}>

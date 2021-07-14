@@ -54,7 +54,18 @@ export const kanban_tasks = [
     attachments: 1,
     image: "https://st3.depositphotos.com/15648834/17930/v/1600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",
     status: KANBAN_COLUMN.DONE,
-  }
+  },
+  {
+    id: getUniqueId(),
+    priority: "high",
+    time: "5 day ago",
+    title: "Dribble Freebies - blog template",
+    type: "Mobile account setting view 2",
+    message: 10,
+    attachments: 1,
+    image: "https://st3.depositphotos.com/15648834/17930/v/1600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg",
+    status: KANBAN_COLUMN.TODO,
+  },
 ];
 
 export const kanban_columns = {
