@@ -5,7 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // import components
-import {DragDropContext, Droppable, Draggable} from 'react-beautiful-dnd';
+import {DragDropContext, Droppable} from 'react-beautiful-dnd';
+import DraggableTasks from './components/DraggableTasks';
 
 // import const
 import {kanban_columns} from "./constants";
@@ -73,20 +74,7 @@ function App() {
                       className={`kanban-column__body ${snapshot.isDraggingOver ? 'dragging': ''}`}
                     >
                       {
-                        column.items.map((item, idx) => (
-                          <Draggable key={item.id} draggableId={item.id} index={idx}>
-                          {(provided, snapshot) => (
-                            <div
-                              {...provided.draggableProps}
-                              {...provided.dragHandleProps}
-                              ref={provided.innerRef}
-                              className={`kanban-task ${snapshot.isDraggingOver ? 'dragging': ''}`}
-                            >
-                              {item.title}
-                            </div>
-                          )}
-                          </Draggable>
-                        ))
+                        column.items.map((item, idx) => (<DraggableTasks item={item} index={idx} />))
                       }
                       {provided.placeholder}
                     </div>
