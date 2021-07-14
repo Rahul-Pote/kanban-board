@@ -53,9 +53,57 @@ body, html {
 }
 
 .kanban-task:not(:last-child) {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .kanban-task.dragging {
   background-color: #e2e2e2;
+}
+
+.card-head {
+  margin-bottom: 8px;
+}
+
+.card__priority {
+  margin-right: 8px;
+}
+
+.card__id,
+.card-head__right,
+.card-footer__left {
+  color: #aaa;
+}
+
+.card-message__icon {
+  height: 24px;
+  opacity: .4;
+}
+
+.card-footer__attachment {
+  margin-left: 8px;
+}
+.card-attachment__icon {
+  height: 16px;
+  opacity: .4;
+}
+.card-footer__add {
+  border: 1px dashed #a1a1a1;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  font-size: 15px;
+  color: #a1a1a1;
+}
+
+.card-footer__profile {
+  height: 28px;
+  width: 28px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 8px;
+}
+
+.card-footer__profile > img {
+  max-height: 100px;
+  width: 100%;
 }

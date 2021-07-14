@@ -1,7 +1,7 @@
 import React, { useState} from 'react';
 
 // import css
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // import components
