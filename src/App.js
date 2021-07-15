@@ -75,7 +75,7 @@ function App() {
                       className={`kanban-column__body ${snapshot.isDraggingOver ? 'dragging': ''}`}
                     >
                       {
-                        column.items.map((item, idx) => (<DraggableTasks item={item} index={idx} />))
+                        column.items.map((item, idx) => (<DraggableTasks item={item} index={idx} key={item.id}/>))
                       }
                       {provided.placeholder}
                     </div>

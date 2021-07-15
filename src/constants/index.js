@@ -34,6 +34,17 @@ export const kanban_tasks = [
   },
   {
     id: getUniqueId(),
+    priority: "low",
+    time: "10 day ago",
+    title: "Mobile account",
+    type: "Mobile, App",
+    messages: 10,
+    attachments: 6,
+    image: "https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
+    status: KANBAN_COLUMN.REVIEW,
+  },
+  {
+    id: getUniqueId(),
     priority: "urgent",
     time: "1 day ago",
     title: "Chatmail - redesign",
@@ -43,7 +54,6 @@ export const kanban_tasks = [
     image: "https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
     status: KANBAN_COLUMN.REVIEW,
   },
-  ,
   {
     id: getUniqueId(),
     priority: "low",
@@ -54,6 +64,17 @@ export const kanban_tasks = [
     attachments: 1,
     image: "https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
     status: KANBAN_COLUMN.DONE,
+  },
+  {
+    id: getUniqueId(),
+    priority: "high",
+    time: "1 day ago",
+    title: "Gmail - redesign",
+    type: "Mail, App",
+    messages: 10,
+    attachments: 1,
+    image: "https://st2.depositphotos.com/1104517/11965/v/950/depositphotos_119659092-stock-illustration-male-avatar-profile-picture-vector.jpg",
+    status: KANBAN_COLUMN.REVIEW,
   },
   {
     id: getUniqueId(),
